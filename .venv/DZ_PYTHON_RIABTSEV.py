@@ -67,7 +67,7 @@ def task2(palindrom):
     for i in range(len(string.punctuation)):
         check = check.replace(string.punctuation[i], "")
     check = check.lower()
-    check_rev = ''.join(reversed(check))
+    check_rev = check[::-1]
     if check == check_rev:
         print("Это палиндром")
     else:
@@ -75,7 +75,6 @@ def task2(palindrom):
 
 
 def task3(text, reserved_words):
-    reserved_words = reserved_words[::-1]
     reserved_words = reserved_words.split()
     print(reserved_words)
     for i in text.split():
@@ -91,9 +90,13 @@ def task4(text):
         if text[i - 1] in ".?!" and text[i] not in ".?!":
             n += 1
     print(n)
-
-
 """sizinput = int(input("Введи размер: "))
 symbinput = input("Выбери символ фигуры: ")
 choseinput = int(input("Введи цифру(это если что от 0-9): "))
 task1(sizinput, symbinput, choseinput)"""
+"""
+task2("")
+task3("","")
+task4("")"""
+
+
