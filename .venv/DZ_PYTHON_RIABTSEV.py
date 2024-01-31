@@ -89,6 +89,8 @@ def task4(text):
         if text[i - 1] in ".?!" and text[i] not in ".?!":
             n += 1
     print(n)
+
+
 """sizinput = int(input("Введи размер: "))
 symbinput = input("Выбери символ фигуры: ")
 choseinput = int(input("Введи цифру(это если что от 0-9): "))
@@ -97,5 +99,3 @@ task1(sizinput, symbinput, choseinput)"""
 task2("")
 task3("","")
 task4("")"""
-
-
