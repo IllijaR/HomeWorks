@@ -76,7 +76,6 @@ def task2(palindrom):
 
 def task3(text, reserved_words):
     reserved_words = reserved_words.split()
-    print(reserved_words)
     for i in text.split():
         if i.lower() in reserved_words:
             text = text.replace(i, i.upper())
