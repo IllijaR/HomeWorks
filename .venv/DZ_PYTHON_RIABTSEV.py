@@ -1,4 +1,5 @@
 import string
+from random import randint
 
 
 def task1(size, symbol, choose):
@@ -62,7 +63,7 @@ def task1(size, symbol, choose):
 
 # обводку не сделал(выходит непонятная каша)
 
-def task2(palindrom):
+def task21(palindrom):
     check = palindrom.replace(" ", "")
     for i in range(len(string.punctuation)):
         check = check.replace(string.punctuation[i], "")
@@ -74,7 +75,7 @@ def task2(palindrom):
         print("Это не палиндром")
 
 
-def task3(text, reserved_words):
+def task22(text, reserved_words):
     reserved_words = reserved_words.split()
     for i in text.split():
         if i.lower() in reserved_words:
@@ -83,7 +84,7 @@ def task3(text, reserved_words):
     print(text)
 
 
-def task4(text):
+def task23(text):
     n = 0
     for i in range(len(text)):
         if text[i - 1] in ".?!" and text[i] not in ".?!":
@@ -91,11 +92,52 @@ def task4(text):
     print(n)
 
 
-"""sizinput = int(input("Введи размер: "))
+def task31(text):
+    try:
+        if text.count("+") == 1:
+            splited = text.split("+")
+            for i in range(len(splited)):
+                splited[i] = int(splited[i])
+            print(splited[0] + splited[1])
+        elif text.count("-") == 1:
+            splited = text.split("-")
+            for i in range(len(splited)):
+                splited[i] = int(splited[i])
+            print(splited[0] - splited[1])
+        elif text.count("*") == 1:
+            splited = text.split("*")
+            for i in range(len(splited)):
+                splited[i] = int(splited[i])
+            print(splited[0] * splited[1])
+        elif text.count("/") == 1:
+            splited = text.split("/")
+            for i in range(len(splited)):
+                splited[i] = int(splited[i])
+            print(splited[0] / splited[1])
+        else:
+            print("Может быть только 1 оператор")
+    except:
+        print("Ты как-то не по понятиям вводишь")
+
+
+def task32(minn, maxn, leng):
+    lst = [randint(minn, maxn) for i in range(leng)]
+    print(f"Список: {lst}")
+    print(f"Минимал: {min(lst)}")
+    print(f"Максим: {max(lst)}")
+    print(f"Кол-во плюсовых: {len([i for i in lst if i > 0])}")
+    print(f"Кол-во 0: {len([i for i in lst if i == 0])}")
+    print(f"Кол-во минусовых: {len([i for i in lst if i < 0])}")
+
+
+"""
+sizinput = int(input("Введи размер: "))
 symbinput = input("Выбери символ фигуры: ")
 choseinput = int(input("Введи цифру(это если что от 0-9): "))
-task1(sizinput, symbinput, choseinput)"""
+task1(sizinput, symbinput, choseinput)
+task21("")
+task22("","")
+task23("")
+task31("")
+task32(0,0,0)
 """
-task2("")
-task3("","")
-task4("")"""
