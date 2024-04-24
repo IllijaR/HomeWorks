@@ -53,6 +53,6 @@ register_user('boba', 'user@raid.com', 'haMe1!')
 register_user('biba', 'user2@mail.com', 'Pass1!3')
 register_user('23ger', 'user@google.com', 'haMe1!')
 
-login_user('user1', 'Password123!')
+login_user('boba', 'haMe1!')
 
 conn.close()
